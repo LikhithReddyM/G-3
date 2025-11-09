@@ -218,49 +218,6 @@ Google-AIO/
 - `POST /api/sheets/create` - Create a spreadsheet
 - `GET /api/sheets/:id/read` - Read spreadsheet data
 
-## Security Notes
-
-- **Never commit** `credentials.json` or `.env` files to version control
-- Tokens are stored in memory (for demo purposes). In production, use:
-  - Secure session storage (Redis, database)
-  - Token encryption
-  - Proper session management
-- Use HTTPS in production
-- Implement proper CORS policies
-
-## Troubleshooting
-
-### "Invalid credentials" error
-- Ensure `credentials.json` is in the root directory
-- Check that OAuth redirect URI matches exactly: `http://localhost:3001/auth/callback`
-- Verify all required APIs are enabled in Google Cloud Console
-
-### Maps API errors
-- Ensure Maps JavaScript API, Geocoding API, and Directions API are enabled
-- Check that `GOOGLE_MAPS_API_KEY` is set in `.env`
-- Verify API key restrictions allow your domain
-
-### Calendar not showing events
-- Check that Calendar API is enabled
-- Verify OAuth scopes include calendar access
-- Ensure you've granted calendar permissions during login
-
-### CORS errors
-- Make sure backend is running on port 3001
-- Check that frontend proxy is configured correctly in `client/package.json`
-
-## Future Enhancements
-
-- [ ] Google Meet integration
-- [ ] ] Google Keep API integration (when available)
-- [ ] Voice input/output
-- [ ] Multi-user support
-- [ ] Persistent session storage
-- [ ] Advanced NLP for better query understanding
-- [ ] Meeting scheduling automation
-- [ ] Email composition and sending
-- [ ] Calendar event creation
-
 ## License
 
 MIT
